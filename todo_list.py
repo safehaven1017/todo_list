@@ -12,11 +12,11 @@ while True:
 
     # add task 
     if user_select == "1":
-        add_task()
+        todo_list.append(add_task())
        
     # delete task
     elif user_select == "2":
-        delete_task()
+        todo_list = delete_task()
     
     # view all tasks
     elif user_select == "3":
