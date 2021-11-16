@@ -78,6 +78,3 @@ def add_task():
         return add_list  
     else:  
         print("\nNothing to add. Returning to main menu.\n")
-# add_task()
-
-
