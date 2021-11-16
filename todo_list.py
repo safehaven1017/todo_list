@@ -1,13 +1,28 @@
 
-while True:
-    user_select = input("Press 1 to add task\nPress 2 to delete task\nPress 3 to view all tasks\nPress q to quit\n\n")
+# while loop to create main menu 
+from add_task import add_task
 
-    if user_select.lower() == "1":
-        break
-    elif user_select.lower() == "2":
-        break
-    elif user_select.lower() == "3":
-        break
+
+while True:
+    
+    #creating overarching dictionary
+    todo_list = []
+    
+    user_select = input("\nPress 1 to add task\nPress 2 to delete task\nPress 3 to view all tasks\nPress q to quit\n\n")
+
+    # add task 
+    if user_select == "1":
+        add_task()
+       
+    # delete task
+    elif user_select == "2":
+        delete_task()
+    
+    # view all tasks
+    elif user_select == "3":
+        view_tasks()
+    
+    # quit 
     elif user_select.lower() == "q":
         break
     else:
