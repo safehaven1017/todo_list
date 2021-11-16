@@ -1,6 +1,7 @@
 from add_task import add_task
 from delete_task import delete_task
 from view_tasks import view_tasks
+from sort_tasks import sort_tasks
 
 #creating overarching dictionary
 todo_list = []
@@ -13,6 +14,7 @@ while True:
     # add task 
     if user_select == "1":
         todo_list = todo_list + add_task()
+        sort_tasks(todo_list)
 
     # delete task
     elif user_select == "2":

@@ -1,3 +1,6 @@
+from sort_tasks import sort_tasks
+from view_tasks import view_tasks
+
 def add_task():
      
     add_list = []
@@ -9,6 +12,11 @@ def add_task():
         # main menu flag for successful task add  
         main_menu_flag = 0
         
+        # if task has been added, list tasks
+        if len(add_list) > 0:
+            sort_tasks(add_list)
+            view_tasks(add_list)
+
         user_input = input("\nEnter a task, or type 'q' to go back to main menu: ")
         if user_input.lower() == "q":
             break 
@@ -28,7 +36,7 @@ def add_task():
                         add_task_dict["priority"] = "high"
                         add_list.append(dict(add_task_dict))
                         main_menu_flag = 1
-                        print(f"\n'High' priority task '{add_task_dict['title']}' successfully added!\n")
+                        print(f"\n'High' priority task '{add_task_dict['title']}' successfully added!")
                         break
                     elif user_input.lower() == "q":
                         break
@@ -60,7 +68,7 @@ def add_task():
                         add_task_dict["priority"] = "low"
                         add_list.append(dict(add_task_dict))
                         main_menu_flag = 1
-                        print(f"\n'Low' priority task '{add_task_dict['title']}' successfully added!\n")
+                        print(f"\n'Low' priority task '{add_task_dict['title']}' successfully added!\n")                       
                         break
                     elif user_input.lower() == "q":
                         break
