@@ -12,7 +12,7 @@ def delete_task(task_list):
                 delete_flag = 0
                 while delete_flag == 0:
                     delete_input = input(f"\nAre you sure you want to delete the task '{task_list[int(user_input) - 1]['title']}'?\nEnter 1 to delete\nEnter 'q' to select a different task\n")
-                    if int(delete_input) == 1:
+                    if delete_input == "1":
                         print(f"The task '{task_list[int(user_input) - 1]['title']}' was deleted!")
                         del task_list[int(user_input) - 1] 
                         delete_flag = 1
