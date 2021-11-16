@@ -73,7 +73,11 @@ def add_task():
             else:
                 print("\nInvalid option. Try again...\n")
 
-    # print(add_list)
+    if add_list != []:
+        print(f"\nAdding {len(add_list)} task(s) and organizing to-do list...\n")
+        return add_list  
+    else:  
+        print("\nNothing to add. Returning to main menu.\n")
 
 # add_task()
 
