@@ -26,7 +26,7 @@ def add_task():
                     user_input = input("\nPress 1 to confirm\nPress 'q' to go back\n\n")
                     if user_input == "1":
                         add_task_dict["priority"] = "high"
-                        add_list.append(add_task_dict)
+                        add_list.append(dict(add_task_dict))
                         main_menu_flag = 1
                         print(f"\n'High' priority task '{add_task_dict['title']}' successfully added!\n")
                         break
@@ -42,7 +42,7 @@ def add_task():
                     user_input = input("\nPress 1 to confirm\nPress 'q' to go back\n\n")
                     if user_input == "1":
                         add_task_dict["priority"] = "medium"
-                        add_list.append(add_task_dict)
+                        add_list.append(dict(add_task_dict))
                         main_menu_flag = 1
                         print(f"\n'Medium' priority task '{add_task_dict['title']}' successfully added!\n")
                         break
@@ -58,7 +58,7 @@ def add_task():
                     user_input = input("\nPress 1 to confirm\nPress 'q' to go back\n\n")
                     if user_input == "1":
                         add_task_dict["priority"] = "low"
-                        add_list.append(add_task_dict)
+                        add_list.append(dict(add_task_dict))
                         main_menu_flag = 1
                         print(f"\n'Low' priority task '{add_task_dict['title']}' successfully added!\n")
                         break
@@ -78,7 +78,6 @@ def add_task():
         return add_list  
     else:  
         print("\nNothing to add. Returning to main menu.\n")
-
 # add_task()
 
 
