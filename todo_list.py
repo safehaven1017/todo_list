@@ -1,4 +1,5 @@
 from add_task import add_task
+from delete_task import delete_task
 from view_tasks import view_tasks
 
 #creating overarching dictionary
@@ -15,13 +16,18 @@ while True:
 
     # delete task
     elif user_select == "2":
-        todo_list = delete_task()
+        if len(todo_list) > 0:
+            todo_list = delete_task(todo_list)
+        else:
+            print("\nYou must add a task before you can delete any.\n")
     
     # view all tasks
     elif user_select == "3":
-        view_tasks(todo_list)
-
-    
+        if len(todo_list) > 0:
+            view_tasks(todo_list)
+        else:
+            print("\nYou don't have any tasks.\n")
+        
     # quit 
     elif user_select.lower() == "q":
         break
